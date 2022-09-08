@@ -199,18 +199,24 @@ function App() {
                     <option value="monthly">Iedere maand</option>
                 </select>
                 <div className="radioButtonsForm">
-                    <label>
+                    <label
+                    htmlFor="afternoonRadio"
+                    >
                         <input
                             type="radio"
                             value={deliveryTime}
+                            id="afternoonRadio"
                             onChange={(e) => toggleDeliveryTime(e.target.value)}
                         />
                         Overdag
                     </label>
-                    <label>
+                    <label
+                    htmlFor="eveningRadio"
+                    >
                         <input
                             type="radio"
                             value={deliveryTime}
+                            id="eveningRadio"
                             onChange={(e) => toggleDeliveryTime(e.target.value)}
                         />
                         's Avonds
