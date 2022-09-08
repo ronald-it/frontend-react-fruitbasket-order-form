@@ -1,0 +1,87 @@
+.titleAligner {
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.fruits {
+    display: flex;
+    border: 1px solid black;
+    padding: 20px;
+    margin-left: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.contactForm {
+    display: flex;
+    padding: 20px;
+    margin-left: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 1px solid black;
+    width: 500px;
+}
+
+.contactForm label {
+    margin: 5px;
+    padding: 5px;
+}
+
+.contactForm select {
+    margin: 5px;
+    padding: 5px;
+}
+
+.contactForm input {
+    margin-left: 5px;
+}
+
+.contactForm textarea {
+    margin: 5px;
+    padding: 5px;
+}
+
+.strawberries, .bananas, .apples, .kiwis {
+    margin: 10px;
+    padding: 10px;
+    border: solid 2px black;
+    width: 300px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fruits p {
+    margin: 5px;
+}
+
+.fruits button {
+    margin: 5px;
+}
+
+.resetButton {
+    width: 320px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    border: solid 1.5px #979797;
+    background-color: #EFEFEF;
+}
+
+.radioButtonsForm {
+    display: flex;
+    flex-direction: row;
+}
