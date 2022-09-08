@@ -61,7 +61,7 @@ function App() {
     const [deliveryFrequency, setDeliveryFrequency] = React.useState("");
     const [deliveryTime, toggleDeliveryTime] = React.useState("");
     const [note, setNote] = React.useState("");
-    const [termsAgreement, toggleTermsAgreement] = React.useState("");
+    const [checkedTerms, toggleCheckedTerms] = React.useState("");
 
     function handleSubmit () {
         console.log(strawBerry)
@@ -73,6 +73,11 @@ function App() {
         console.log(surName)
         console.log(age)
         console.log(zipCode)
+
+        console.log(deliveryFrequency)
+        console.log(deliveryTime)
+        console.log(note)
+        console.log(checkedTerms)
     }
 
     return (
@@ -226,8 +231,10 @@ function App() {
                 <label>
                     <input
                         type="checkbox"
-                        value={termsAgreement}
-                        onChange={(e) => toggleTermsAgreement(e.target.value)}
+                        name="terms-and-conditions"
+                        id="terms-and-conditions"
+                        checked={checkedTerms}
+                        onChange={() => toggleCheckedTerms(!checkedTerms)}
                     />
                     Ik ga akkoord met de voorwaarden
                 </label>
