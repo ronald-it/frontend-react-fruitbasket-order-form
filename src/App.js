@@ -194,6 +194,7 @@ function App() {
                     value={deliveryFrequency}
                     onChange={(e) => setDeliveryFrequency(e.target.value)}
                 >
+                    <option>Kies de frequentie</option>
                     <option value="weekly">Iedere week</option>
                     <option value="biweekly">Om de week</option>
                     <option value="monthly">Iedere maand</option>
@@ -204,7 +205,8 @@ function App() {
                     >
                         <input
                             type="radio"
-                            value={deliveryTime}
+                            value="afternoon"
+                            name="deliveryMoment"
                             id="afternoonRadio"
                             onChange={(e) => toggleDeliveryTime(e.target.value)}
                         />
@@ -215,7 +217,8 @@ function App() {
                     >
                         <input
                             type="radio"
-                            value={deliveryTime}
+                            value="evening"
+                            name="deliveryMoment"
                             id="eveningRadio"
                             onChange={(e) => toggleDeliveryTime(e.target.value)}
                         />
