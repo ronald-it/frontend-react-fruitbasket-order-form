@@ -153,7 +153,15 @@ function App() {
                 </div>
 
                 <Button
-                onClick={counterReset}
+                strawBerry={strawBerry}
+                banana={banana}
+                apple={apple}
+                kiwi={kiwi}
+                setStrawberry={setStrawBerry}
+                setBanana={setBanana}
+                setApple={setApple}
+                setKiwi={setKiwi}
+                submitOrReset="Reset"
                 >
                     Reset
                 </Button>
@@ -255,6 +263,19 @@ function App() {
                     />
                     Ik ga akkoord met de voorwaarden
                 </label>
+                <Button
+                firstName={firstName}
+                surName={surName}
+                age={age}
+                zipCode={zipCode}
+                deliveryFrequency={deliveryFrequency}
+                deliveryTime={deliveryTime}
+                note={note}
+                checkedTerms={checkedTerms}
+                submitOrReset="Submit"
+                >
+                    Verzend
+                </Button>
                 <button
                     type="button"
                     onClick={handleSubmit}
