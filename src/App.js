@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import Button from "./components/Button";
 
 function App() {
     const [strawBerry, setStrawBerry] = React.useState(0);
@@ -150,6 +151,13 @@ function App() {
                         +
                     </button>
                 </div>
+
+                <Button
+                onClick={counterReset}
+                >
+                    Reset
+                </Button>
+
                 <button
                     className="resetButton"
                     type="button"
