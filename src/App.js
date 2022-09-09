@@ -161,7 +161,6 @@ function App() {
                 setBanana={setBanana}
                 setApple={setApple}
                 setKiwi={setKiwi}
-                submitOrReset="Reset"
                 >
                     Reset
                 </Button>
@@ -272,7 +271,6 @@ function App() {
                 deliveryTime={deliveryTime}
                 note={note}
                 checkedTerms={checkedTerms}
-                submitOrReset="Submit"
                 >
                     Verzend
                 </Button>
