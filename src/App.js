@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Button from "./components/Button";
 import FruitCountModifier from "./components/FruitCountModifier";
+import TextInput from "./components/TextInput";
 
 function App() {
     const [strawBerry, setStrawBerry] = React.useState(0);
@@ -89,7 +90,7 @@ function App() {
             </div>
             <div className="fruits">
                 <div className="strawberries">
-                    <p>🍓 Aarbeien</p>
+                    <p>🍓 Aardbeien</p>
                     <FruitCountModifier
                     eventHandler={strawBerrySubtractor}
                     input={strawBerry}
@@ -155,34 +156,30 @@ function App() {
                 </Button>
             </div>
             <div className="contactForm">
-                <label>
+                <TextInput
+                value={firstName}
+                stateChanger={setFirstName}
+                >
                     Voornaam
-                    <input
-                    value={firstName}
-                    onChange={(e) => setFirstName(e.target.value)}
-                    />
-                </label>
-                <label>
+                </TextInput>
+                <TextInput
+                    value={surName}
+                    stateChanger={setSurName}
+                >
                     Achternaam
-                    <input
-                        value={surName}
-                        onChange={(e) => setSurName(e.target.value)}
-                    />
-                </label>
-                <label>
+                </TextInput>
+                <TextInput
+                    value={age}
+                    stateChanger={setAge}
+                >
                     Leeftijd
-                    <input
-                        value={age}
-                        onChange={(e) => setAge(e.target.value)}
-                    />
-                </label>
-                <label>
+                </TextInput>
+                <TextInput
+                    value={zipCode}
+                    stateChanger={setZipCode}
+                >
                     Postcode
-                    <input
-                        value={zipCode}
-                        onChange={(e) => setZipCode(e.target.value)}
-                    />
-                </label>
+                </TextInput>
                 <label>Bezorgfrequentie</label>
                 <select
                     name="deliveryFrequency"
