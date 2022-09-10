@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Button from "./components/Button";
+import FruitCountModifier from "./components/FruitCountModifier";
 
 function App() {
     const [strawBerry, setStrawBerry] = React.useState(0);
@@ -89,89 +90,69 @@ function App() {
             <div className="fruits">
                 <div className="strawberries">
                     <p>🍓 Aarbeien</p>
-                    <button
-                        type="button"
-                        onClick={() => strawBerrySubtractor(strawBerry)}
+                    <FruitCountModifier
+                    eventHandler={strawBerrySubtractor}
+                    input={strawBerry}
                     >
                         -
-                    </button>
+                    </FruitCountModifier>
                     <p>{strawBerry}</p>
-                    <button
-                        type="button"
-                        onClick={() => strawBerryAdder(strawBerry)}
+                    <FruitCountModifier
+                        eventHandler={strawBerryAdder}
                     >
                         +
-                    </button>
+                    </FruitCountModifier>
                 </div>
                 <div className="bananas">
                     <p>🍌 Bananen</p>
-                    <button
-                        type="button"
-                        onClick={() => bananaSubtractor(banana)}
+                    <FruitCountModifier
+                        eventHandler={bananaSubtractor}
+                        input={banana}
                     >
                         -
-                    </button>
+                    </FruitCountModifier>
                     <p>{banana}</p>
-                    <button
-                        type="button"
-                        onClick={() => bananaAdder(banana)}
+                    <FruitCountModifier
+                        eventHandler={bananaAdder}
                     >
                         +
-                    </button>
+                    </FruitCountModifier>
                 </div>
                 <div className="apples">
                     <p>🍏 Appels</p>
-                    <button
-                        type="button"
-                        onClick={() => appleSubtractor(apple)}
+                    <FruitCountModifier
+                        eventHandler={appleSubtractor}
+                        input={apple}
                     >
                         -
-                    </button>
+                    </FruitCountModifier>
                     <p>{apple}</p>
-                    <button
-                        type="button"
-                        onClick={() => appleAdder(apple)}
+                    <FruitCountModifier
+                        eventHandler={appleAdder}
                     >
                         +
-                    </button>
+                    </FruitCountModifier>
                 </div>
                 <div className="kiwis">
                     <p>🥝 Kiwi's</p>
-                    <button
-                        type="button"
-                        onClick={() => kiwiSubtractor(kiwi)}
+                    <FruitCountModifier
+                        eventHandler={kiwiSubtractor}
+                        input={kiwi}
                     >
                         -
-                    </button>
+                    </FruitCountModifier>
                     <p>{kiwi}</p>
-                    <button
-                        type="button"
-                        onClick={() => kiwiAdder(kiwi)}
+                    <FruitCountModifier
+                        eventHandler={kiwiAdder}
                     >
                         +
-                    </button>
+                    </FruitCountModifier>
                 </div>
-
                 <Button
-                strawBerry={strawBerry}
-                banana={banana}
-                apple={apple}
-                kiwi={kiwi}
-                setStrawberry={setStrawBerry}
-                setBanana={setBanana}
-                setApple={setApple}
-                setKiwi={setKiwi}
+                eventHandler={counterReset}
                 >
                     Reset
                 </Button>
-
-                <button
-                    className="resetButton"
-                    type="button"
-                    onClick={counterReset}
-                >
-                    Reset
-                </button>
             </div>
             <div className="contactForm">
                 <label>
@@ -263,23 +244,10 @@ function App() {
                     Ik ga akkoord met de voorwaarden
                 </label>
                 <Button
-                firstName={firstName}
-                surName={surName}
-                age={age}
-                zipCode={zipCode}
-                deliveryFrequency={deliveryFrequency}
-                deliveryTime={deliveryTime}
-                note={note}
-                checkedTerms={checkedTerms}
+                eventHandler={handleSubmit}
                 >
                     Verzend
                 </Button>
-                <button
-                    type="button"
-                    onClick={handleSubmit}
-                >
-                    Verzend
-                </button>
             </div>
         </>
     );
